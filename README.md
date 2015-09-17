@@ -1,6 +1,6 @@
 # lascala-codejam
 
-라 스칼라 코딩단: https://groups.google.com/forum/#!forum/scala-korea
+_라 스칼라 코딩단_: https://groups.google.com/forum/#!forum/scala-korea
 
 이 저장소는 '라 스칼라 코딩단'에서 진행하는 Google codejam 스터디 참가 활동을 기록하고 있습니다.
 
