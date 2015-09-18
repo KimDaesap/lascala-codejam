@@ -16,5 +16,6 @@ _라 스칼라 코딩단_: https://groups.google.com/forum/#!forum/scala-korea
 		* PIS 책을 보겠다
 
 * I/O Error (2015.09.04)
+	* 문제: https://code.google.com/codejam/contest/9214486/dashboard
 	* 체크인: 스칼라에 관심이 있었는데 모임 있어서 첫 참석
 	* 문제풀이: [태환, 상민](https://gist.github.com/theodoreLee/9d0c7ca64cb14e714dae)
