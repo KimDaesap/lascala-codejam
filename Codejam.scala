@@ -10,7 +10,7 @@ object Codejam {
     val inputLines = io.scala.io.Source.fromFile(inputFilePath).getLines()
     val inputCount = inputLines.next.toInt
     val writer = if (isConsole) new PrintWriter(scala.Console.out)
-    else new PrintWriter(outputFilePath)
+      else new PrintWriter(outputFilePath)
 
     try {
       process(inputCount, inputLines)(writer.println)
