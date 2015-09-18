@@ -1,8 +1,8 @@
 import java.io.PrintWriter
 
 object Codejam {
-  val inputFilePath = "A-small-practice.in"
-  val outputFilePath = "A-small-practice.out"
+  val inputFilePath = "example.in"
+  val outputFilePath = "example.out"
   val isConsole = true
 
   // Main procedure.
