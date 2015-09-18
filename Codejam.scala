@@ -1,6 +1,7 @@
 import java.io.PrintWriter
 
 object Codejam {
+  // Config.
   val inputFilePath = "example.in"
   val outputFilePath = "example.out"
   val isConsole = true
