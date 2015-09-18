@@ -1,13 +1,13 @@
 import java.io.PrintWriter
 
 object Codejam {
-  val inputFilePath = "example.in"
-  val outputFilePath = "example.out"
+  val inputFilePath = "A-small-practice.in"
+  val outputFilePath = "A-small-practice.out"
   val isConsole = true
 
   // Main procedure.
   def main(args: Array[String]): Unit = {
-    val inputLines = io.scala.io.Source.fromFile(inputFilePath).getLines()
+    val inputLines = scala.io.Source.fromFile(inputFilePath).getLines()
     val inputCount = inputLines.next.toInt
     val writer = if (isConsole) new PrintWriter(scala.Console.out)
       else new PrintWriter(outputFilePath)
@@ -25,8 +25,8 @@ object Codejam {
     for (num <- 1 to inputCount) {
       val count = inputLines.next()
       val value = inputLines.next()
-
-      lineOut(s"$count, $value")
+      val result = value.grouped(8).map(x => {(0 /: x)((acc, x) => {acc << 1 | ~(x >> 1) & 1})}.toChar).mkString
+      lineOut(s"Case #$num: $result")
     }
   }
 
