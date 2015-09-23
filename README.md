@@ -4,7 +4,7 @@ _라 스칼라 코딩단_: https://groups.google.com/forum/#!forum/scala-korea
 
 이 저장소는 '라 스칼라 코딩단'에서 진행하는 Google codejam 스터디 참가 활동을 기록하고 있습니다.
 
-* Dreary Design (2015.09.11)
+* Power Levels (2015.09.18)
 	* 문제: https://code.google.com/codejam/contest/9214486/dashboard#s=p2
 	* 체크인
 		* 좋다
