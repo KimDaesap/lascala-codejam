@@ -5,6 +5,18 @@ _라 스칼라 코딩단_: https://groups.google.com/forum/#!forum/scala-korea
 이 저장소는 '라 스칼라 코딩단'에서 진행하는 Google codejam 스터디 참가 활동을 기록하고 있습니다.
 
 * Dreary Design (2015.09.11)
+	* 문제: https://code.google.com/codejam/contest/9214486/dashboard#s=p2
+	* 체크인
+		* 좋다
+		* 스칼라 기초공부중
+		* 오늘도 즐거운 코딩
+	* 문제풀이: [태환&상민](https://gist.github.com/theodoreLee/f4defd0d9efb0dab0774)
+	* 회고
+		* 유용한 것들을 많이 배워서 공부가 됐다
+		* 문제 맥락을 잘 이해를 못해서 헤맸다
+		* 문제를 스스로 다시 풀어보겠다
+
+* Dreary Design (2015.09.11)
 	* 문제: https://code.google.com/codejam/contest/9214486/dashboard#s=p1
 	* 체크인
 		* 새로운 배움에 들떠 있다
