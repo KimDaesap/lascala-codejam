@@ -31,12 +31,7 @@ object Codejam {
 		val perform = Array.ofDim[Boolean](r + 1, c + 1)
 		var acc = 0
 
-//		println("input: " + r + ", " + c)
-
 		def go(current: (Int, Int), direction: (Int, Int)): Boolean = {
-//			println("current: " + current)
-//			println("isRnage: " +(current._1 < r && current._2 < c))
-
 			// 현재 위치의 유효성 검사.
 			if ((0 <= current._1 && current._1 < r && 0 <= current._2 && current._2 < c) == false) {
 				return false
@@ -45,9 +40,7 @@ object Codejam {
 			// 지나온 경로인지 검사.
 			if (perform(current._1)(current._2)) {
 				return false
-			}
-
-//			println(perform(current._1)(current._2))
+			}//		
 
 			// 경로에 현재 위치 등록.
 			perform(current._1)(current._2) = true
