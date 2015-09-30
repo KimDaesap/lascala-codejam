@@ -40,7 +40,7 @@ object Codejam {
 			// 지나온 경로인지 검사.
 			if (perform(current._1)(current._2)) {
 				return false
-			}//		
+			}	
 
 			// 경로에 현재 위치 등록.
 			perform(current._1)(current._2) = true
