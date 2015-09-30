@@ -22,15 +22,15 @@ object Codejam {
 	}
 
 	// Process input value.
-	def process(inputLines: Iterator[String])(lineOut: String => Unit) = {
+	def process(inputLines: Iterator[String])(output: String => Unit) = {
 		val inputCount = inputLines.next.toInt
 
 		for (num <- 1 to inputCount) {
 			val data = inputLines.next()
 			val result = data
 
-			lineOut(s"Case#$num: $result")
-        	}
-    	}
+			output(s"Case#$num: $result")
+		}
+	}
 
 }
