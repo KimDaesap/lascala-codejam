@@ -10,11 +10,16 @@ object Codejam {
 	// Main procedure.
 	def main(args: Array[String]): Unit = {
 		val inputLines = scala.io.Source.fromFile(inputFilePath).getLines()
+		val inputCount = inputLines.next.toInt
 		val writer = if (isConsole) new PrintWriter(Console.out)
-		else new PrintWriter(outputFilePath)
+			else new PrintWriter(outputFilePath)
 
 		try {
-			process(inputLines)(writer.println)
+			for (num <- 1 to inputCount) {
+				val result = process(inputLines.next())
+
+				writer.println(s"Case#$num: $result")
+			}
 		} finally {
 			writer.flush()
 			writer.close()
@@ -22,15 +27,10 @@ object Codejam {
 	}
 
 	// Process input value.
-	def process(inputLines: Iterator[String])(output: String => Unit) = {
-		val inputCount = inputLines.next.toInt
+	def process(input: String): String = {
+		val result = input
 
-		for (num <- 1 to inputCount) {
-			val data = inputLines.next()
-			val result = data
-
-			output(s"Case#$num: $result")
-		}
+		result
 	}
 
 }
