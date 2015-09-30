@@ -59,7 +59,7 @@ object Codejam {
 				acc += 1
 			}
 
-			  // 경로에 현재 위치 해제.
+			// 경로에 현재 위치 해제.
 			perform(current._1)(current._2) = false
 
 			// result
