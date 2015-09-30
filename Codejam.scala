@@ -30,7 +30,7 @@ object Codejam {
 			val result = data
 
 			lineOut(s"Case#$num: $result")
-        }
-    }
+        	}
+    	}
 
 }
