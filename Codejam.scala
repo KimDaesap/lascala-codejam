@@ -11,7 +11,7 @@ object Codejam {
 	def main(args: Array[String]): Unit = {
 		val inputLines = scala.io.Source.fromFile(inputFilePath).getLines()
 		val writer = if (isConsole) new PrintWriter(Console.out)
-		else new PrintWriter(outputFilePath)
+			else new PrintWriter(outputFilePath)
 
 		try {
 			// 입력 케이스 수 T 만큼 입력 처리.
