@@ -15,7 +15,8 @@ object Codejam {
 
 		try {
 			// 입력 케이스 수 T 만큼 입력 처리.
-			(1 to inputLines.next().toInt).foreach((num) => writer.println(process(num, inputLines)))
+			(1 to inputLines.next().toInt).foreach(
+				(num) => writer.println(s"Case #$num: ${process(num, inputLines)}"))
 		}
 		finally {
 			writer.flush()
@@ -23,10 +24,15 @@ object Codejam {
 		}
 	}
 
+	/*
+		문제풀이.
+	 */
+
+	case class Command(t: Int, d: String)
+
 	// Process input value.
 	def process(num: Int, inputLines: Iterator[String]): String = {
 		val result = new StringBuilder
-
 		result.toString
 	}
 
