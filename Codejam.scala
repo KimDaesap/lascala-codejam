@@ -1,36 +1,33 @@
 import java.io.PrintWriter
 
 object Codejam {
-
 	// Config.
-	val inputFilePath = "example.in"
-	val outputFilePath = "example.out"
+	val inputName = "example"
+	val inputFilePath = inputName + ".in"
+	val outputFilePath = inputName + ".out"
 	val isConsole = true
 
 	// Main procedure.
 	def main(args: Array[String]): Unit = {
 		val inputLines = scala.io.Source.fromFile(inputFilePath).getLines()
-		val inputCount = inputLines.next.toInt
 		val writer = if (isConsole) new PrintWriter(Console.out)
 			else new PrintWriter(outputFilePath)
 
 		try {
-			for (num <- 1 to inputCount) {
-				val result = process(inputLines.next())
-
-				writer.println(s"Case#$num: $result")
-			}
-		} finally {
+			// 입력 케이스 수 T 만큼 입력 처리.
+			(1 to inputLines.next().toInt).foreach(process(_, inputLines)(writer.println))
+		}
+		finally {
 			writer.flush()
 			writer.close()
 		}
 	}
 
 	// Process input value.
-	def process(input: String): String = {
-		val result = input
+	def process(num: Int, inputLines: Iterator[String])(lineOut: String => Unit) = {
+		val result = new StringBuilder
 
-		result
+		lineOut(s"Case #$num: $result")
 	}
 
 }
