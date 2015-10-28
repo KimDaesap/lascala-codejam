@@ -1,7 +1,5 @@
 import java.io.PrintWriter
 
-import scala.collection.immutable.Stream.Empty
-
 object Codejam {
 	// Config.
 	val inputName = "example"
@@ -38,38 +36,64 @@ object Codejam {
 		- 게임은 뱀의 머리가 몸통에 부딪치거나 10^9 만큼의 시간이 지나면 끝난다.
 	 */
 
+	val limitTime = 10 ^ 9
+
 	case class Point(x: Int, y: Int)
-	case class Snake(direction: String, body: List[Point])
 	case class Command(second: Int, direction: String)
+	case class Snake(direction: String, body: List[Point])
+
+	val Empty = 0; var Apple = 1; var Body = 3
+	case class Stage(rows: Int, columns: Int) {
+		val array = Array.tabulate(rows, columns) ((x, y) => {
+			if ((x + y) % 2 == 0) Empty else Body
+		})
+	}
 
 	def process(inputLines: Iterator[String]): String = {
+		// 입력 값.
 		val Array(s, r, c) = inputLines.next().split(" ").map(_.toInt)
-		val commands =  (1 to s).map(_ => {
+		val commands = (1 to s).map(_ => {
 			inputLines.next().split(" ") match { case Array(t, d) => Command(t.toInt, d) }
-		}).toList
+		})
 
-		// 초기화.
-		val stage = Array.tabulate(r, c) ((x, y) => (x + y) % 2 != 0)
+		// 게임 초기화.
+		val stage = Stage(r,c)
 		val snake = Snake("R", List(Point(1, 1)))
-		var gameTime = 0
+		var elapseTime = 0 // remainTime = (10^9) - elapseTime
+		var isDead = false
+		var isTimeover = false
 
-		def move(c: Command, cs: List[Command]) = {
+		def foward(): Boolean = {
+			// 뱀이 향하고 있는 방향 앞에 몸통(꼬리 제외)이 가로막고 있는지 검사.
+			// 뱀의 꼬리 제거.
+			// 뱀이 향하고 있는 방향으로 머리 추가.
+			false
+		}
+
+		def tick() = {
+			elapseTime += 1
+			foward()
+		}
+
+		def play(): Unit = {
 
 		}
 
 
-		/* loop s <- 0 to 10^9
+		while (isDead == false && isTimeover == false) {
+			tick()
 
-			command.second - s 만큼 현재 방향으로 전진.
-
-
-		 */
+			isDead = (foward() == false)
+			isTimeover = elapseTime >= limitTime
+		}
 
 		// Debug print.
 		"\n\t" +
-		  (for (row <- stage) yield row.mkString("{", ",", "}")).mkString("\n\t") +
+		  (for (row <- stage.array) yield row.mkString("{", ",", "}")).mkString("\n\t") +
 		  "\n\t" + snake.toString +
 		  "\n\t" + commands.mkString(", ")
+
+		return snake.body.length.toString
 	}
 
 }
