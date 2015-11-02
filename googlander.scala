@@ -3,8 +3,8 @@ import java.io.PrintWriter
 object Codejam {
 
 	// Config.
-	val inputFilePath = "D-large-practice.in"
-	val outputFilePath = "D-large-practice.out"
+	val inputFilePath = "D-small-practice.in"
+	val outputFilePath = "D-small-practice.out"
 	val isConsole = false
 
 	// Main procedure.
