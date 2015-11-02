@@ -1,9 +1,14 @@
 import java.io.PrintWriter
 import scala.collection._
 
-object Codejam {
+/*
+	Problem D. gSnake
+	https://code.google.com/codejam/contest/4284486/dashboard#s=p3
+ */
+
+object gSnake {
 	// Config.
-	val inputName = "D-large-practice"
+	val inputName = "D-small-practice"
 	val inputFilePath = inputName + ".in"
 	val outputFilePath = inputName + ".out"
 	val isConsole = true
@@ -98,7 +103,7 @@ object Codejam {
 			gameBoard.map(tail) = Tail
 		}
 
-		def turnAction(t: String) = t match {
+		def doAction(t: String) = t match {
 			case "L" => snake.direction = snake.direction match {
 				case Right => Up; case Up => Left
 				case Left => Down; case Down => Right
@@ -138,7 +143,7 @@ object Codejam {
 		while (actions.isEmpty == false && isDead == false) {
 			action = actions.dequeue
 			gameTick(action.time)
-			turnAction(action.turn)
+			doAction(action.turn)
 		}
 
 		while (isGrow == false && isDead == false) {
