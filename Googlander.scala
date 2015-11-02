@@ -1,6 +1,11 @@
 import java.io.PrintWriter
 
-object Codejam {
+/*
+	Program D. Googlander
+	https://code.google.com/codejam/contest/9214486/dashboard#s=p3
+ */
+
+object Googlander {
 
 	// Config.
 	val inputFilePath = "D-small-practice.in"
